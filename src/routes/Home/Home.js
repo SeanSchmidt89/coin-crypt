@@ -5,8 +5,9 @@ import "./Home.css";
 const Home = () => {
   return (
     <div>
-      Home
-      <CoinList />
+      <div className="home">
+        <CoinList />
+      </div>
     </div>
   );
 };

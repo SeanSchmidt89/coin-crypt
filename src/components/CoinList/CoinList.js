@@ -24,8 +24,7 @@ const CoinList = () => {
     console.log(coins);
   }, [coins]);
   return (
-    <div>
-      CoinList
+    <div className="coin-list">
       {coins.length > 0 &&
         coins.map((item) => <Coin key={item.id} item={item} />)}
     </div>

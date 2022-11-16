@@ -7,8 +7,8 @@ import { useParams } from "react-router-dom";
 
 const CoinDetail = () => {
   const dispatch = useDispatch();
-  const coin = useSelector((state) => state.coins.coinDetail)
-  const {id} = useParams();
+  const coin = useSelector((state) => state.coins.coinDetail);
+  const { id } = useParams();
   const url = `https://api.coingecko.com/api/v3/coins/${id}`;
   useEffect(() => {
     axios
@@ -16,7 +16,9 @@ const CoinDetail = () => {
       .then((response) => dispatch(coinSliceActions.coinDetail(response.data)))
       .catch((error) => console.log("Error:", error.message));
   }, [dispatch, url]);
-  return <div>CoinDetail{coin.id && <p>it works{coin.id}</p>}</div>;
+  return (
+    <div className="coin-detail">CoinDetail{coin.id && <p>{coin.id}</p>}</div>
+  );
 };
 
 export default CoinDetail;
