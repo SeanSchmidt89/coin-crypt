@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   coins: [],
+  coinDetail: {},
 };
 
 const coinSlice = createSlice({
@@ -11,6 +12,9 @@ const coinSlice = createSlice({
     fetchCoins: (state, action) => {
       state.coins = action.payload;
     },
+    coinDetail: (state, action) => {
+      state.coinDetail = action.payload
+    }
   },
 });
 

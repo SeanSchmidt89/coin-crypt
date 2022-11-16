@@ -1,5 +1,5 @@
 import React from "react";
-import CoinList from "../CoinList/CoinList";
+import CoinList from "../../components/CoinList/CoinList";
 import "./Home.css";
 
 const Home = () => {
