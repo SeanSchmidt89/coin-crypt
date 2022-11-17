@@ -5,7 +5,12 @@ import "./Coin.css";
 const Coin = ({ item }) => {
   return (
     <Link to={`/coin/${item.id}`}>
-      <div className="coin">Name: {item && item.name}</div>
+      <div className="coin">
+        <div className="img-container">
+          <img src={item.image} alt={item.title} />
+        </div>
+        <h3 className="name">{item && item.name}</h3>
+      </div>
     </Link>
   );
 };

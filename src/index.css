@@ -20,8 +20,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
-  background-color: rgb(55, 53, 53);
+  background-color: #26272b;
+  color: #f4f4f4;
   font-size: 1rem;
 }
 

@@ -25,8 +25,13 @@ const CoinList = () => {
   }, [coins]);
   return (
     <div className="coin-list">
-      {coins.length > 0 &&
-        coins.map((item) => <Coin key={item.id} item={item} />)}
+      <div className="coin-container">
+        <div className="coin-grid">
+          {coins.length > 0 &&
+            coins.map((item) => <Coin key={item.id} item={item} />)}
+        </div>
+        <div className="grid-controls">buttons</div>
+      </div>
     </div>
   );
 };

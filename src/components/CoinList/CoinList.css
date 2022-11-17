@@ -1,4 +1,20 @@
 .coin-list {
+    width: 100%;
+}
+
+.coin-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.coin-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    margin: auto;
+    border: 1px solid red;
+}
+
+.grid-controls {
+    border: 1px solid red;
+    width: 250px;
 }

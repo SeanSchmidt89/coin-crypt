@@ -1,9 +1,9 @@
 .footer {
-    height: 245px;
-    width: 100%;
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 245px;
+  width: 100%;
+  background-color: black;
+  color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
