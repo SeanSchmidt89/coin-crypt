@@ -10,6 +10,7 @@ const Coin = ({ item }) => {
           <img src={item.image} alt={item.title} />
         </div>
         <h3 className="name">{item && item.name}</h3>
+        <p className="price">${item.current_price.toLocaleString()}</p>
       </div>
     </Link>
   );

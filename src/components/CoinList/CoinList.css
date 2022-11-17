@@ -4,17 +4,36 @@
 
 .coin-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    margin: 3rem auto;
+    background-color: rgb(53, 55, 63);
+    width: 900px;
+    padding: 0.3rem;
+    border-radius: 18px;
 }
 
 .coin-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: auto;
-    border: 1px solid red;
 }
 
 .grid-controls {
-    border: 1px solid red;
     width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.grid-controls button {
+    margin: 1rem;
+    padding: 0.5rem;
+    width: 80%;
+    border-radius: 8px;
+    background-color: black;
+    color: rgb(75, 209, 149);
+    cursor: pointer;
+}
+
+

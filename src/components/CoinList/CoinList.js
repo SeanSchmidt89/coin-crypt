@@ -30,7 +30,14 @@ const CoinList = () => {
           {coins.length > 0 &&
             coins.map((item) => <Coin key={item.id} item={item} />)}
         </div>
-        <div className="grid-controls">buttons</div>
+        <div className="grid-controls">
+        <h2>Buttons</h2>
+          <button>add button</button>
+          <button>add button</button>
+          <button>add button</button>
+          <button>add button</button>
+          <button>add button</button>
+        </div>
       </div>
     </div>
   );
