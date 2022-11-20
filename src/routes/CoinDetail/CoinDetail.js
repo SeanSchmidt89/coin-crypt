@@ -17,8 +17,11 @@ const CoinDetail = () => {
       .catch((error) => console.log("Error:", error.message));
   }, [dispatch, url]);
   return (
-    <div className="coin-detail">CoinDetail{coin.id && <p>{coin.id}</p>}</div>
-  );
+    <div className="coin-detail">
+      <div className="name">{coin.id && <p>{coin.id}</p>}</div>
+      <div>{coin.market_data && <p>${coin.market_data.current_price.usd.toLocaleString()}</p>}</div>
+    </div>
+  )
 };
 
 export default CoinDetail;
