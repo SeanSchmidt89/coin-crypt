@@ -1,15 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import "./Nav.css";
 
 const Nav = () => {
+  const cartNumber = useSelector((state) => state.cart.totalQuantity);
   return (
     <div className="nav">
-      <a href="/"><h1>Coin Crypt</h1></a>
+      <Link to="/">
+        <h1>Coin Crypt</h1>
+      </Link>
       <div className="nav-btns">
-        <a href="/">Home</a>
-        <a href="/">Profile</a>
-        <a href="/">Login</a>
-        <a href="/">SignUp</a>
+        <Link href="/">Home</Link>
+        <Link href="/">Profile</Link>
+        <Link href="/">Login</Link>
+        <Link href="/">SignUp</Link>
+        <Link to="/cart" className="cart-link">
+          Cart {cartNumber ? cartNumber : null}
+        </Link>
       </div>
     </div>
   );
