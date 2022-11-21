@@ -8,7 +8,7 @@ const Cart = () => {
   return (
     <div className="cart">
       {cartList.length > 0 &&
-        cartList.map((item) => <CartItem id={item.id} item={item} />)}
+        cartList.map((item) => <CartItem key={item.id} item={item} />)}
     </div>
   );
 };

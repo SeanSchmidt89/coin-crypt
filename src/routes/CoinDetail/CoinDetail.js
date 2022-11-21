@@ -21,6 +21,9 @@ const CoinDetail = () => {
   const buyHandler = (e) => {
     const item = {
       id: coin.id,
+      symbol: coin.symbol,
+      image: coin.image.small,
+      marketCapRank: coin.market_cap_rank,
       price: coin.market_data.current_price.usd,
       quantity: 1,
       totalCost: coin.market_data.current_price.usd,
@@ -35,7 +38,7 @@ const CoinDetail = () => {
           <p>${coin.market_data.current_price.usd.toLocaleString()}</p>
         )}
       </div>
-      <button onClick={buyHandler}>Buy</button>
+      <button onClick={buyHandler}>Add to Cart</button>
     </div>
   );
 };
