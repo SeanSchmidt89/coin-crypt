@@ -6,8 +6,16 @@ import "./CartItem.css";
 const CartItem = ({ item }) => {
   const dispatch = useDispatch();
 
-  const removeHandler = () => {
+  const removeItemHandler = () => {
     dispatch(cartSliceActions.removeItem(item.id));
+  };
+
+  const increaseQuantityHandler = (e) => {
+    dispatch(cartSliceActions.increaseQuantity(item.id));
+  };
+
+  const decreaseQuantityHandler = (e) => {
+    dispatch(cartSliceActions.decreaseQuantity(item.id));
   };
 
   return (
@@ -21,14 +29,14 @@ const CartItem = ({ item }) => {
           <p>Price: ${item.price}</p>
           <p>Qauntity: {item.quantity}</p>
           <p>Total: ${item.totalCost.toLocaleString()}</p>
-          <button onClick={removeHandler}>Remove From Cart</button>
+          <button onClick={removeItemHandler}>Remove From Cart</button>
         </div>
         <div className="right">
           <img src={item.image} alt={item.id} />
           <div className="add-sub-btns">
-            <button>-</button>
+            <button onClick={decreaseQuantityHandler}>-</button>
             <p>{item.quantity}</p>
-            <button>+</button>
+            <button onClick={increaseQuantityHandler}>+</button>
           </div>
         </div>
       </div>
