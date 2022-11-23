@@ -26,6 +26,7 @@ const CartItem = ({ item }) => {
       </h2>
       <div className="lower">
         <div className="left">
+          <p>{item.symbol.toUpperCase()}</p>
           <p>Price: ${item.price}</p>
           <p>Qauntity: {item.quantity}</p>
           <p>Total: ${item.totalCost.toLocaleString()}</p>
