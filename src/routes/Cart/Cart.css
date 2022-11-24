@@ -38,3 +38,37 @@
 .cart-info p span {
   float: right;
 }
+
+.cart-btns {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-info button {
+  width: 360px;
+  height: 35px;
+  margin: 0.6rem;
+  background: transparent;
+  border: 2px solid rgb(75, 209, 149);
+  color: white;
+  cursor: pointer;
+}
+
+.cart-info button:hover {
+  width: 360px;
+  height: 35px;
+  margin: 0.6rem;
+  font-size: 0.85rem;
+  background: rgba(75, 209, 149, 0.2);
+  border: 3px solid rgb(75, 209, 149);
+  color: white;
+  cursor: pointer;
+}
+
+.empty-cart {
+  text-align: center;
+  margin-top: 6rem;
+  font-size: 1.2rem;
+}

@@ -8,13 +8,13 @@ const Nav = () => {
   return (
     <div className="nav">
       <Link to="/">
-        <h1>Coin Crypt</h1>
+        <h1>COIN CRYPT</h1>
       </Link>
       <div className="nav-btns">
-        <Link href="/">Home</Link>
-        <Link href="/">Profile</Link>
-        <Link href="/">Login</Link>
-        <Link href="/">SignUp</Link>
+        <Link to="/">Home</Link>
+        <Link to="/">Profile</Link>
+        <Link to="/login">Login</Link>
+        <Link to="/sign-up">SignUp</Link>
         <Link to="/cart" className="cart-link">
           Cart {cartNumber ? cartNumber : null}
         </Link>
