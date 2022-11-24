@@ -3,3 +3,38 @@
   min-height: 900px;
   margin: auto;
 }
+
+.cart h1 {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+.cart-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cart-info {
+  width: 450px;
+  height: 300px;
+  padding: 0 1rem;
+}
+
+.cart-info h2{
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.info-header {
+  text-align: center;
+  border-bottom: 2px solid white;
+}
+
+.cart-info p {
+  font-size: 1.1rem;
+  padding: 1.2rem 2.4rem;
+}
+
+.cart-info p span {
+  float: right;
+}
