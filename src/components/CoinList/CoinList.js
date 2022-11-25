@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { coinSliceActions } from "../../store/coinSlice";
 import Coin from "../Coin/Coin";
@@ -7,12 +7,13 @@ import "./CoinList.css";
 
 const CoinList = () => {
   const dispatch = useDispatch();
-  const coins = useSelector((state) => state.coins.coins);
+  const [pageNumber, setPageNumber] = useState(1);
+  const coins = useSelector((state) => state.coins.pageList);
 
   useEffect(() => {
     axios
       .get(
-        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=12&page=1&sparkline=false"
+        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=200&page=1&sparkline=false"
       )
       .then((response) => dispatch(coinSliceActions.fetchCoins(response.data)))
       .catch((error) => {
@@ -20,20 +21,38 @@ const CoinList = () => {
       });
   }, [dispatch]);
 
-  useEffect(() => {
-    console.log(coins);
-  }, [coins]);
+  const nextPageHandler = (e) => {
+    if (pageNumber === 16) {
+      return;
+    } else {
+      setPageNumber(pageNumber + 1);
+      dispatch(coinSliceActions.nextPage(pageNumber));
+    }
+  };
+
+  const prevPageHandler = (e) => {
+    if(pageNumber === 1){
+      return
+    } else {
+      setPageNumber(pageNumber - 1);
+      dispatch(coinSliceActions.prevPage(pageNumber))
+    }
+    
+  };
   return (
     <div className="coin-list">
       <div className="coin-container">
         <div className="coin-grid">
           {coins.length > 0 &&
-            coins.map((item) => <Coin key={item.id} item={item} />)}
+            coins
+              .slice(0, 12)
+              .map((item) => <Coin key={item.id} item={item} />)}
         </div>
         <div className="grid-controls">
           <h2>Buttons</h2>
-          <button>add button</button>
-          <button>add button</button>
+          <button onClick={nextPageHandler}>next page</button>
+          <button onClick={prevPageHandler}>prev page</button>
+          {pageNumber}
           <button>add button</button>
           <button>add button</button>
           <button>add button</button>
