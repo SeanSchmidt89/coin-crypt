@@ -13,7 +13,7 @@ const CoinList = () => {
   useEffect(() => {
     axios
       .get(
-        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=200&page=1&sparkline=false"
+        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=300&page=1&sparkline=false"
       )
       .then((response) => dispatch(coinSliceActions.fetchCoins(response.data)))
       .catch((error) => {
@@ -22,7 +22,7 @@ const CoinList = () => {
   }, [dispatch]);
 
   const nextPageHandler = (e) => {
-    if (pageNumber === 16) {
+    if (pageNumber === 20) {
       return;
     } else {
       setPageNumber(pageNumber + 1);
