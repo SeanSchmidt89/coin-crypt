@@ -16,9 +16,9 @@ const CoinRows = () => {
         <p className="market-cap">MARKET-CAP</p>
         <p>ADD TO CART</p>
       </div>
-      {/* DYNAMIC DATA OF COINS FOR ROW */}
+      {/* DYNAMIC DATA OF COINS FOR EACH ROW */}
       {coins.length > 0 &&
-        coins.map((item) => <CoinRow key={item.id} item={item} />)}
+        coins.slice(0, 16).map((item) => <CoinRow key={item.id} item={item} />)}
     </div>
   );
 };
