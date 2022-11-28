@@ -32,11 +32,43 @@ const CoinDetail = () => {
   };
   return (
     <div className="coin-detail">
-      <div className="name">{coin.id && <p>{coin.id}</p>}</div>
-      <div>
-        {coin.market_data && (
-          <p>${coin.market_data.current_price.usd.toLocaleString()}</p>
-        )}
+      {/* TOP ROW WITH TITLES */}
+      <div className="row-top">
+        <p className="name">NAME</p>
+        <p className="price">PRICE</p>
+        <p className="symbol">SYMBOL</p>
+        <p className="24hr">24H CHANGE</p>
+        <p className="market-cap">MARKET-CAP</p>
+        <p>ADD TO CART</p>
+      </div>
+      {/* DYNAMIC DATA OF COINS FOR ROW */}
+      <div className="row">
+        <div className="name">
+          {coin.image ? <img src={coin.image.thumb} alt={coin.id} /> : null}
+          {coin.id ? coin.id.toUpperCase() : null}
+        </div>
+        <p className="price">
+          $
+          {coin.market_data
+            ? coin.market_data.current_price.usd.toLocaleString()
+            : null}
+        </p>
+        <p className="symbol">
+          {coin.symbol ? coin.symbol.toUpperCase() : null}
+        </p>
+        <p className="24hr">
+          $
+          {coin.market_data
+            ? coin.market_data.price_change_24h_in_currency.usd.toLocaleString()
+            : null}
+        </p>
+        <p className="market-cap">
+          $
+          {coin.market_data
+            ? coin.market_data.market_cap.usd.toLocaleString()
+            : null}
+        </p>
+        <p className="add-btn">+ CART</p>
       </div>
       <button onClick={buyHandler}>Add to Cart</button>
     </div>

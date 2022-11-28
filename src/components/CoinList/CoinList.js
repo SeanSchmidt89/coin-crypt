@@ -22,7 +22,7 @@ const CoinList = () => {
   }, [dispatch]);
 
   const nextPageHandler = (e) => {
-    if (pageNumber === 20) {
+    if (pageNumber === 21) {
       return;
     } else {
       setPageNumber(pageNumber + 1);

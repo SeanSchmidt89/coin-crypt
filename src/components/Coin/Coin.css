@@ -50,7 +50,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: red;
+  color: rgb(248, 73, 73);
 }
 
 .price-change-neg {
