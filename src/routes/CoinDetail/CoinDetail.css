@@ -1,4 +1,40 @@
 .coin-detail {
+  width: 1000px;
+  height: 950px;
+  margin: 4rem auto;
+
+  background-color: #1b1c1e;
+}
+
+.coin-detail .title{
+  margin: 4rem;
+  padding-top: 2rem;
+  font-size: 1.4rem;
+  border-bottom: 1px solid white;
+}
+
+.title .symbol {
+  color: gray;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-left: 1.2rem;
+}
+
+
+.title .rank {
+  font-weight: 500;
+  font-size: 1.8rem;
+  float: right;
+  padding-top: 1.2rem;
+}
+
+.description p {
+  margin-right: 4rem;
+  font-size: 0.7rem;
+  width: 400px;
+  float: right;
+}
+/* .coin-detail {
   max-width: 1250px;
   min-height: 900px;
   margin: auto;
@@ -55,4 +91,4 @@
 
 .add-btn:hover {
   color: rgb(75, 209, 149);
-}
+} */

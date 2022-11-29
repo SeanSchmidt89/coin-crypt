@@ -32,7 +32,32 @@ const CoinDetail = () => {
   };
   return (
     <div className="coin-detail">
-      {/* TOP ROW WITH TITLES */}
+      <div className="title">
+        <h1>
+          {coin.name ? coin.name.toUpperCase() : null}
+          <span className="symbol">
+            {coin.symbol ? coin.symbol.toUpperCase() : null}
+          </span>
+          <span className="rank">
+            Rank #{coin.market_cap_rank ? coin.market_cap_rank : null}
+          </span>
+        </h1>
+      </div>
+      <div className="prices">
+        <p>Current Price: ${coin.market_data ? coin.market_data.current_price.usd.toLocaleString() : null}</p>
+        <p>Market Cap: ${coin.market_data ? coin.market_data.market_cap.usd.toLocaleString(): null}</p>
+        <p>Volume: BTC {coin.market_data ? coin.market_data.total_volume.btc : null}</p>
+        <p>24h High: ${coin.market_data ? coin.market_data.high_24h.usd.toLocaleString() : null}</p>
+        <p>24h Low: ${coin.market_data ? coin.market_data.low_24h.usd.toLocaleString() : null}</p>
+        <p>24h Price Change: ${coin.market_data ? coin.market_data.low_24h.usd.toLocaleString() : null}</p>
+        <p>24h Low: ${coin.market_data ? coin.market_data.low_24h.usd.toLocaleString() : null}</p>
+        <p>24h Low: ${coin.market_data ? coin.market_data.low_24h.usd.toLocaleString() : null}</p>
+      </div>
+      <div className="description">
+        <p>{coin.description ? coin.description.en : null}</p>
+      </div>
+
+      {/* TOP ROW WITH TITLES
       <div className="row-top">
         <p className="name">NAME</p>
         <p className="price">PRICE</p>
@@ -41,7 +66,7 @@ const CoinDetail = () => {
         <p className="market-cap">MARKET-CAP</p>
         <p>ADD TO CART</p>
       </div>
-      {/* DYNAMIC DATA OF COINS FOR ROW */}
+      
       <div className="row">
         <div className="name">
           {coin.image ? <img src={coin.image.thumb} alt={coin.id} /> : null}
@@ -70,7 +95,7 @@ const CoinDetail = () => {
         </p>
         <p className="add-btn">+ CART</p>
       </div>
-      <button onClick={buyHandler}>Add to Cart</button>
+      <button onClick={buyHandler}>Add to Cart</button> */}
     </div>
   );
 };
