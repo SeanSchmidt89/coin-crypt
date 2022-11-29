@@ -50,9 +50,9 @@
 }
 
 .add-btn {
-  border: 1px solid white;
   text-align: center;
-  cursor: pointer;
-  border-radius: 12px;
-  width: 20px;
+}
+
+.add-btn:hover {
+  color: rgb(75, 209, 149);
 }
