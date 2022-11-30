@@ -27,13 +27,21 @@
   padding-top: 1.2rem;
 }
 
-.prices {
-  width: 450px;
+.middle-container {
+  display: flex;
+  justify-content: space-between;
 }
 
-.coin-detail .prices {
-  margin: 0 4rem;
+.prices {
+  width: 450px;
+  margin-left: 4rem;
 }
+
+.prices h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.6rem;
+}
+
 
 .coin-detail .prices p {
   margin-top: 0.8rem;
@@ -46,9 +54,65 @@
   float: right;
 }
 
+.prices .green {
+  color: rgb(75, 209, 149);
+}
+
+.prices .red {
+  color: rgb(248, 73, 73);
+}
+
+.middle-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5rem;
+}
+
+.img-box {
+  width: 160px;
+  height: 160px;
+  margin-bottom: 2rem;
+}
+
+.img-box img {
+  width: 160px;
+  height: 160px;
+}
+
+.price-converter {
+  width: 360px;
+  height: 230px;
+  background-color: #323337;
+  border-radius: 8px;
+}
+
+.price-converter h3 {
+  text-align: center;
+  margin: 1rem;
+}
+
+.price-converter input {
+  width: 180px;
+  height: 30px;
+  margin-bottom: 0.2rem;
+  background: transparent;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.price-converter input:focus {
+  width: 180px;
+  height: 30px;
+  margin-bottom: 0.2rem;
+  background: transparent;
+  color: white;
+  font-size: 1.1rem;
+  outline-color: rgb(75, 209, 149);
+}
+
 .description p {
-  margin-right: 4rem;
+  margin: 4rem;
   font-size: 0.7rem;
-  width: 380px;
-  float: right;
 }

@@ -32,6 +32,7 @@ const CoinDetail = () => {
   };
   return (
     <div className="coin-detail">
+      {/*top header of coin detail */}
       <div className="title">
         <h1>
           {coin.name ? coin.name.toUpperCase() : null}
@@ -43,19 +44,159 @@ const CoinDetail = () => {
           </span>
         </h1>
       </div>
-      <div className="prices">
-        <h3>{coin.symbol ? coin.symbol.toUpperCase() : null} PRICE STATISTICS</h3>
-        <p>Current Price:<span>${coin.market_data ? coin.market_data.current_price.usd.toLocaleString() : null}</span></p>
-        <p>Market Cap:<span>${coin.market_data ? coin.market_data.market_cap.usd.toLocaleString(): null}</span></p>
-        <p>24h High/Low:<span>${coin.market_data ? coin.market_data.high_24h.usd.toLocaleString() : null} / ${coin.market_data ? coin.market_data.low_24h.usd.toLocaleString() : null}</span></p>
-        <p>24Hr Change<span>%{coin.market_data ? coin.market_data.price_change_percentage_24h.toFixed(2) : null}</span></p>
-        <p>7d Change<span>%{coin.market_data ? coin.market_data.price_change_percentage_7d.toFixed(2) : null}</span></p>
-        <p>14d Change<span>%{coin.market_data ? coin.market_data.price_change_percentage_14d.toFixed(2) : null}</span></p>
-        <p>30d Change<span>%{coin.market_data ? coin.market_data.price_change_percentage_30d.toFixed(2) : null}</span></p>
-        <p>1 Year Change<span>%{coin.market_data ? coin.market_data.price_change_percentage_1y.toFixed(2) : null}</span></p>
-        <p>Total Supply<span>{coin.market_data ? coin.market_data.total_supply.toLocaleString() : null}</span></p>
-        <p>Circulating Supply<span>{coin.market_data ? coin.market_data.circulating_supply.toLocaleString() : null}</span></p>
+      {/* MIDDLE SECTION */}
+      <div className="middle-container">
+        {/* table for prices */}
+        <div className="prices">
+          <h3>
+            {coin.symbol ? coin.symbol.toUpperCase() : null} PRICE STATISTICS
+            (USD)
+          </h3>
+          <p>
+            Current Price:
+            <span>
+              $
+              {coin.market_data
+                ? coin.market_data.current_price.usd.toLocaleString()
+                : null}
+            </span>
+          </p>
+          <p>
+            Market Cap:
+            <span>
+              $
+              {coin.market_data
+                ? coin.market_data.market_cap.usd.toLocaleString()
+                : null}
+            </span>
+          </p>
+          <p>
+            24h High/Low:
+            <span>
+              $
+              {coin.market_data
+                ? coin.market_data.high_24h.usd.toLocaleString()
+                : null}{" "}
+              / $
+              {coin.market_data
+                ? coin.market_data.low_24h.usd.toLocaleString()
+                : null}
+            </span>
+          </p>
+          <p>
+            24Hr Change
+            <span
+              className={
+                !coin.market_data
+                  ? null
+                  : coin.market_data.price_change_percentage_24h > 0
+                  ? "green"
+                  : "red"
+              }
+            >
+              {coin.market_data
+                ? coin.market_data.price_change_percentage_24h.toFixed(2)
+                : null}
+              %
+            </span>
+          </p>
+          <p>
+            7d Change
+            <span
+              className={
+                !coin.market_data
+                  ? null
+                  : coin.market_data.price_change_percentage_7d > 0
+                  ? "green"
+                  : "red"
+              }
+            >
+              {coin.market_data
+                ? coin.market_data.price_change_percentage_7d.toFixed(2)
+                : null}
+              %
+            </span>
+          </p>
+          <p>
+            14d Change
+            <span
+              className={
+                !coin.market_data
+                  ? null
+                  : coin.market_data.price_change_percentage_14d > 0
+                  ? "green"
+                  : "red"
+              }
+            >
+              {coin.market_data
+                ? coin.market_data.price_change_percentage_14d.toFixed(2)
+                : null}
+              %
+            </span>
+          </p>
+          <p>
+            30d Change
+            <span
+              className={
+                !coin.market_data
+                  ? null
+                  : coin.market_data.price_change_percentage_30d > 0
+                  ? "green"
+                  : "red"
+              }
+            >
+              {coin.market_data
+                ? coin.market_data.price_change_percentage_30d.toFixed(2)
+                : null}
+              %
+            </span>
+          </p>
+          <p>
+            1 Year Change
+            <span
+              className={
+                !coin.market_data
+                  ? null
+                  : coin.market_data.price_change_percentage_1y > 0
+                  ? "green"
+                  : "red"
+              }
+            >
+              {coin.market_data
+                ? coin.market_data.price_change_percentage_1y.toFixed(2)
+                : null}
+              %
+            </span>
+          </p>
+          <p>
+            Total Supply
+            <span>
+              {coin.market_data
+                ? coin.market_data.total_supply.toLocaleString()
+                : null}
+            </span>
+          </p>
+          <p>
+            Circulating Supply
+            <span>
+              {coin.market_data
+                ? coin.market_data.circulating_supply.toLocaleString()
+                : null}
+            </span>
+          </p>
+        </div>
+        <div className="middle-right">
+          <div className="img-box">
+            {coin.image ? <img src={coin.image.large} alt={coin.id} /> : null}
+          </div>
+          <div className="price-converter">
+            <h3>{coin.symbol ? coin.symbol.toUpperCase() : null} to USD Converter</h3>
+            <input /><br />
+            <input />
+          </div>
+        </div>
       </div>
+      {/* PARAGRAPH OF INFO ABOUT COIN */}
       <div className="description">
         <p>{coin.description ? coin.description.en : null}</p>
       </div>
