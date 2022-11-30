@@ -37,3 +37,4 @@ const Coin = ({ item }) => {
 };
 
 export default Coin;
+

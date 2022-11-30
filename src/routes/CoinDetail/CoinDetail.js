@@ -44,58 +44,21 @@ const CoinDetail = () => {
         </h1>
       </div>
       <div className="prices">
-        <p>Current Price: ${coin.market_data ? coin.market_data.current_price.usd.toLocaleString() : null}</p>
-        <p>Market Cap: ${coin.market_data ? coin.market_data.market_cap.usd.toLocaleString(): null}</p>
-        <p>Volume: BTC {coin.market_data ? coin.market_data.total_volume.btc : null}</p>
-        <p>24h High: ${coin.market_data ? coin.market_data.high_24h.usd.toLocaleString() : null}</p>
-        <p>24h Low: ${coin.market_data ? coin.market_data.low_24h.usd.toLocaleString() : null}</p>
-        <p>24h Price Change: ${coin.market_data ? coin.market_data.low_24h.usd.toLocaleString() : null}</p>
-        <p>24h Low: ${coin.market_data ? coin.market_data.low_24h.usd.toLocaleString() : null}</p>
-        <p>24h Low: ${coin.market_data ? coin.market_data.low_24h.usd.toLocaleString() : null}</p>
+        <h3>{coin.symbol ? coin.symbol.toUpperCase() : null} PRICE STATISTICS</h3>
+        <p>Current Price:<span>${coin.market_data ? coin.market_data.current_price.usd.toLocaleString() : null}</span></p>
+        <p>Market Cap:<span>${coin.market_data ? coin.market_data.market_cap.usd.toLocaleString(): null}</span></p>
+        <p>24h High/Low:<span>${coin.market_data ? coin.market_data.high_24h.usd.toLocaleString() : null} / ${coin.market_data ? coin.market_data.low_24h.usd.toLocaleString() : null}</span></p>
+        <p>24Hr Change<span>%{coin.market_data ? coin.market_data.price_change_percentage_24h.toFixed(2) : null}</span></p>
+        <p>7d Change<span>%{coin.market_data ? coin.market_data.price_change_percentage_7d.toFixed(2) : null}</span></p>
+        <p>14d Change<span>%{coin.market_data ? coin.market_data.price_change_percentage_14d.toFixed(2) : null}</span></p>
+        <p>30d Change<span>%{coin.market_data ? coin.market_data.price_change_percentage_30d.toFixed(2) : null}</span></p>
+        <p>1 Year Change<span>%{coin.market_data ? coin.market_data.price_change_percentage_1y.toFixed(2) : null}</span></p>
+        <p>Total Supply<span>{coin.market_data ? coin.market_data.total_supply.toLocaleString() : null}</span></p>
+        <p>Circulating Supply<span>{coin.market_data ? coin.market_data.circulating_supply.toLocaleString() : null}</span></p>
       </div>
       <div className="description">
         <p>{coin.description ? coin.description.en : null}</p>
       </div>
-
-      {/* TOP ROW WITH TITLES
-      <div className="row-top">
-        <p className="name">NAME</p>
-        <p className="price">PRICE</p>
-        <p className="symbol">SYMBOL</p>
-        <p className="24hr">24H CHANGE</p>
-        <p className="market-cap">MARKET-CAP</p>
-        <p>ADD TO CART</p>
-      </div>
-      
-      <div className="row">
-        <div className="name">
-          {coin.image ? <img src={coin.image.thumb} alt={coin.id} /> : null}
-          {coin.id ? coin.id.toUpperCase() : null}
-        </div>
-        <p className="price">
-          $
-          {coin.market_data
-            ? coin.market_data.current_price.usd.toLocaleString()
-            : null}
-        </p>
-        <p className="symbol">
-          {coin.symbol ? coin.symbol.toUpperCase() : null}
-        </p>
-        <p className="24hr">
-          $
-          {coin.market_data
-            ? coin.market_data.price_change_24h_in_currency.usd.toLocaleString()
-            : null}
-        </p>
-        <p className="market-cap">
-          $
-          {coin.market_data
-            ? coin.market_data.market_cap.usd.toLocaleString()
-            : null}
-        </p>
-        <p className="add-btn">+ CART</p>
-      </div>
-      <button onClick={buyHandler}>Add to Cart</button> */}
     </div>
   );
 };

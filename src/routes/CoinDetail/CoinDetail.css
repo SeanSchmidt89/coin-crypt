@@ -6,7 +6,7 @@
   background-color: #1b1c1e;
 }
 
-.coin-detail .title{
+.coin-detail .title {
   margin: 4rem;
   padding-top: 2rem;
   font-size: 1.4rem;
@@ -20,7 +20,6 @@
   margin-left: 1.2rem;
 }
 
-
 .title .rank {
   font-weight: 500;
   font-size: 1.8rem;
@@ -28,67 +27,28 @@
   padding-top: 1.2rem;
 }
 
+.prices {
+  width: 450px;
+}
+
+.coin-detail .prices {
+  margin: 0 4rem;
+}
+
+.coin-detail .prices p {
+  margin-top: 0.8rem;
+  padding-bottom: 0.1rem;
+  font-size: 1.1rem;
+  border-bottom: 1px solid gray;
+}
+
+.coin-detail .prices p span {
+  float: right;
+}
+
 .description p {
   margin-right: 4rem;
   font-size: 0.7rem;
-  width: 400px;
+  width: 380px;
   float: right;
 }
-/* .coin-detail {
-  max-width: 1250px;
-  min-height: 900px;
-  margin: auto;
-  background-color: #26272b;
-  color: #f4f4f4;
-}
-
-.row-top {
-  display: flex;
-  justify-content: space-evenly;
-  border-bottom: 1px solid white;
-  padding: 0.8rem 0;
-  margin-bottom: 1.5rem;
-}
-
-.row-top p {
-  color: rgb(75, 209, 149);
-  width: 130px;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.row-top .name {
-  width: 160px;
-}
-
-.row {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 1rem;
-  padding: 0.5rem 0;
-  background-color: #1b1c1e;
-  border-radius: 18px;
-}
-
-.row p {
-  width: 130px;
-}
-
-.row div {
-  width: 160px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.row div img {
-  padding-right: 0.5rem;
-}
-
-.add-btn {
-  text-align: center;
-}
-
-.add-btn:hover {
-  color: rgb(75, 209, 149);
-} */
