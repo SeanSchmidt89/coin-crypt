@@ -33,6 +33,6 @@ a {
   text-align: center;
 }
 
-.fa-btn {
-  cursor: pointer;
+.add-btn:hover {
+  color: rgb(75, 209, 149);
 }

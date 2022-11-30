@@ -172,7 +172,7 @@ const CoinDetail = () => {
             Total Supply
             <span>
               {coin.market_data
-                ? coin.market_data.total_supply.toLocaleString()
+                ? coin.market_data.total_supply
                 : null}
             </span>
           </p>
@@ -180,7 +180,7 @@ const CoinDetail = () => {
             Circulating Supply
             <span>
               {coin.market_data
-                ? coin.market_data.circulating_supply.toLocaleString()
+                ? coin.market_data.circulating_supply
                 : null}
             </span>
           </p>
@@ -191,7 +191,7 @@ const CoinDetail = () => {
           </div>
           <div className="price-converter">
             <h3>{coin.symbol ? coin.symbol.toUpperCase() : null} to USD Converter</h3>
-            <input /><br />
+            <input />
             <input />
           </div>
         </div>
