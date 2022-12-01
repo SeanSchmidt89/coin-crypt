@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { coinSliceActions } from "../../store/coinSlice";
 import { cartSliceActions } from "../../store/cartSlice";
 import axios from "axios";
 import "./CoinDetail.css";
 import { useParams } from "react-router-dom";
+import PriceConverter from "../../components/PriceConverter/PriceConverter";
 
 const CoinDetail = () => {
-  const [dollar, setDollar] = useState(null);
-  const [crypto, setCrypto] = useState(null);
   const dispatch = useDispatch();
   const coin = useSelector((state) => state.coins.coinDetail);
   const { id } = useParams();
@@ -33,15 +32,6 @@ const CoinDetail = () => {
     dispatch(cartSliceActions.addItem(item));
   };
 
-  const cyptoInputHandler = (e) => {
-    setCrypto(e.target.value);
-    setDollar(e.target.value * coin.market_data.current_price.usd)
-  };
-
-  const dollarInputHandler = (e) => {
-    setDollar(e.target.value);
-    setCrypto(e.target.value / coin.market_data.current_price.usd)
-  };
   return (
     <div className="coin-detail">
       {/*top header of coin detail */}
@@ -197,7 +187,8 @@ const CoinDetail = () => {
           <div className="img-box">
             {coin.image ? <img src={coin.image.large} alt={coin.id} /> : null}
           </div>
-          <div className="price-converter">
+          <PriceConverter coin={coin} />
+          {/* <div className="price-converter">
             <h3>
               {coin.symbol ? coin.symbol.toUpperCase() : null} to USD Converter
             </h3>
@@ -212,7 +203,7 @@ const CoinDetail = () => {
                 {crypto || dollar} {coin.symbol.toUpperCase()} is equal to ${dollar.toLocaleString()} USD
               </p>
             ) : null}
-          </div>
+          </div> */}
         </div>
       </div>
       {/* PARAGRAPH OF INFO ABOUT COIN */}
