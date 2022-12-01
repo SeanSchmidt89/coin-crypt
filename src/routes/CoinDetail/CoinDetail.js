@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { coinSliceActions } from "../../store/coinSlice";
 import { cartSliceActions } from "../../store/cartSlice";
@@ -7,6 +7,8 @@ import "./CoinDetail.css";
 import { useParams } from "react-router-dom";
 
 const CoinDetail = () => {
+  const [dollar, setDollar] = useState(null);
+  const [crypto, setCrypto] = useState(null);
   const dispatch = useDispatch();
   const coin = useSelector((state) => state.coins.coinDetail);
   const { id } = useParams();
@@ -29,6 +31,16 @@ const CoinDetail = () => {
       totalCost: coin.market_data.current_price.usd,
     };
     dispatch(cartSliceActions.addItem(item));
+  };
+
+  const cyptoInputHandler = (e) => {
+    setCrypto(e.target.value);
+    setDollar(e.target.value * coin.market_data.current_price.usd)
+  };
+
+  const dollarInputHandler = (e) => {
+    setDollar(e.target.value);
+    setCrypto(e.target.value / coin.market_data.current_price.usd)
   };
   return (
     <div className="coin-detail">
@@ -171,17 +183,13 @@ const CoinDetail = () => {
           <p>
             Total Supply
             <span>
-              {coin.market_data
-                ? coin.market_data.total_supply
-                : null}
+              {coin.market_data ? coin.market_data.total_supply : null}
             </span>
           </p>
           <p>
             Circulating Supply
             <span>
-              {coin.market_data
-                ? coin.market_data.circulating_supply
-                : null}
+              {coin.market_data ? coin.market_data.circulating_supply : null}
             </span>
           </p>
         </div>
@@ -190,9 +198,20 @@ const CoinDetail = () => {
             {coin.image ? <img src={coin.image.large} alt={coin.id} /> : null}
           </div>
           <div className="price-converter">
-            <h3>{coin.symbol ? coin.symbol.toUpperCase() : null} to USD Converter</h3>
-            <input />
-            <input />
+            <h3>
+              {coin.symbol ? coin.symbol.toUpperCase() : null} to USD Converter
+            </h3>
+            <div className="input-container">
+              <p>{coin.symbol ? coin.symbol.toUpperCase() : null}</p>
+              <input onChange={cyptoInputHandler} value={crypto} />
+              <input onChange={dollarInputHandler} value={dollar} />
+              <p>USD</p>
+            </div>
+            {dollar ? (
+              <p>
+                {crypto || dollar} {coin.symbol.toUpperCase()} is equal to ${dollar.toLocaleString()} USD
+              </p>
+            ) : null}
           </div>
         </div>
       </div>
