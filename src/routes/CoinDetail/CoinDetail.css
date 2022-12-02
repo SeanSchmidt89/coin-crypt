@@ -31,7 +31,7 @@
   justify-content: space-between;
 }
 
-.prices {
+/* .prices {
   width: 450px;
   margin-left: 4rem;
 }
@@ -59,7 +59,7 @@
 
 .prices .red {
   color: rgb(248, 73, 73);
-}
+} */
 
 .middle-right {
   display: flex;

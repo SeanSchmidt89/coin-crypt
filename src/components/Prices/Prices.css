@@ -1,0 +1,29 @@
+.prices {
+    width: 450px;
+    margin-left: 4rem;
+  }
+  
+  .prices h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.6rem;
+  }
+  
+  
+  .coin-detail .prices p {
+    margin-top: 0.8rem;
+    padding-bottom: 0.1rem;
+    font-size: 1.1rem;
+    border-bottom: 1px solid gray;
+  }
+  
+  .coin-detail .prices p span {
+    float: right;
+  }
+  
+  .prices .green {
+    color: rgb(75, 209, 149);
+  }
+  
+  .prices .red {
+    color: rgb(248, 73, 73);
+  }

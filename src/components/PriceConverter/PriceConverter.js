@@ -8,7 +8,7 @@ const PriceConverter = ({ coin }) => {
   const [isValidDollar, setIsValidDollar] = useState(true);
   const cyptoInputHandler = (e) => {
     if (/[a-z]/gi.test(e.target.value)) {
-      setIsValidDollar(true)
+      setIsValidDollar(true);
       setIsValidCoin(false);
       return;
     }
@@ -19,7 +19,7 @@ const PriceConverter = ({ coin }) => {
 
   const dollarInputHandler = (e) => {
     if (/[a-z]/gi.test(e.target.value)) {
-      setIsValidCoin(true)
+      setIsValidCoin(true);
       setIsValidDollar(false);
       return;
     }
