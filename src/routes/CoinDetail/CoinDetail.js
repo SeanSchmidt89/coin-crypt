@@ -13,7 +13,7 @@ const CoinDetail = () => {
   const dispatch = useDispatch();
   const coin = useSelector((state) => state.coins.coinDetail);
   const { id } = useParams();
-  const [amount, setAmount] = useState(0)
+  const [amount, setAmount] = useState(0);
   const url = `https://api.coingecko.com/api/v3/coins/${id}`;
   useEffect(() => {
     axios
@@ -22,13 +22,13 @@ const CoinDetail = () => {
       .catch((error) => console.log("Error:", error.message));
   }, [dispatch, url]);
 
-  const upHandler = (e) => {
+  const upAmountHandler = (e) => {
+    setAmount(amount + 1)
+  };
 
-  }
-
-  const downHandler = (e) => {
-    
-  }
+  const downAmountHandler = (e) => {
+    setAmount(amount - 1)
+  };
 
   const buyHandler = (e) => {
     const item = {
@@ -37,10 +37,11 @@ const CoinDetail = () => {
       image: coin.image.small,
       marketCapRank: coin.market_cap_rank,
       price: coin.market_data.current_price.usd,
-      quantity: 1,
+      quantity: amount,
       totalCost: coin.market_data.current_price.usd,
     };
     dispatch(cartSliceActions.addItem(item));
+    setAmount(0)
   };
 
   return (
@@ -75,12 +76,12 @@ const CoinDetail = () => {
       <div className="buy-container">
         <h3>Purchase {coin.name}</h3>
         <div className="amount-btns">
-            <button onClick={upHandler} >-</button>
-            <p>{amount}</p>
-            <button onClick={downHandler} >+</button>
-          </div>
+          <button onClick={downAmountHandler}>-</button>
+          <p>{amount}</p>
+          <button onClick={upAmountHandler}>+</button>
+        </div>
         <div className="buy-btns">
-            <button onClick={buyHandler}>Purchase</button>
+          <button onClick={buyHandler}>Purchase</button>
           <Link to="/cart">
             <button>View Cart</button>
           </Link>

@@ -123,3 +123,8 @@
   margin: 1rem 4rem;
   font-size: 0.7rem;
 }
+
+.validBuy {
+  float: right;
+  color: green;
+}
