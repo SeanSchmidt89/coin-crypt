@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { coinSliceActions } from "../../store/coinSlice";
 import { cartSliceActions } from "../../store/cartSlice";
@@ -12,6 +13,7 @@ const CoinDetail = () => {
   const dispatch = useDispatch();
   const coin = useSelector((state) => state.coins.coinDetail);
   const { id } = useParams();
+  const [amount, setAmount] = useState(0)
   const url = `https://api.coingecko.com/api/v3/coins/${id}`;
   useEffect(() => {
     axios
@@ -19,6 +21,14 @@ const CoinDetail = () => {
       .then((response) => dispatch(coinSliceActions.coinDetail(response.data)))
       .catch((error) => console.log("Error:", error.message));
   }, [dispatch, url]);
+
+  const upHandler = (e) => {
+
+  }
+
+  const downHandler = (e) => {
+    
+  }
 
   const buyHandler = (e) => {
     const item = {
@@ -62,7 +72,20 @@ const CoinDetail = () => {
       </div>
       {/* MIDDLE SECTION */}
       {/* BOTTOM SECTION */}
-      <div className="buy-container"></div>
+      <div className="buy-container">
+        <h3>Purchase {coin.name}</h3>
+        <div className="amount-btns">
+            <button onClick={upHandler} >-</button>
+            <p>{amount}</p>
+            <button onClick={downHandler} >+</button>
+          </div>
+        <div className="buy-btns">
+            <button onClick={buyHandler}>Purchase</button>
+          <Link to="/cart">
+            <button>View Cart</button>
+          </Link>
+        </div>
+      </div>
       {/* paragraph of coin info*/}
       <div className="description">
         <p>{coin.description ? coin.description.en : null}</p>
