@@ -14,6 +14,7 @@ const CoinDetail = () => {
   const coin = useSelector((state) => state.coins.coinDetail);
   const { id } = useParams();
   const [amount, setAmount] = useState(0);
+  const [purchaseMessage, SetPurchaseMessage] = useState(" ");
   const url = `https://api.coingecko.com/api/v3/coins/${id}`;
   useEffect(() => {
     axios
@@ -23,11 +24,13 @@ const CoinDetail = () => {
   }, [dispatch, url]);
 
   const upAmountHandler = (e) => {
-    setAmount(amount + 1)
+    setAmount(amount + 1);
   };
 
   const downAmountHandler = (e) => {
-    setAmount(amount - 1)
+    if (amount > 0) {
+      setAmount(amount - 1);
+    }
   };
 
   const buyHandler = (e) => {
@@ -41,7 +44,9 @@ const CoinDetail = () => {
       totalCost: coin.market_data.current_price.usd,
     };
     dispatch(cartSliceActions.addItem(item));
-    setAmount(0)
+    setAmount(0);
+    SetPurchaseMessage(`${amount} ${coin.symbol.toUpperCase()} added to Cart`);
+    setTimeout(() => SetPurchaseMessage(" "), 2800);
   };
 
   return (
@@ -86,6 +91,7 @@ const CoinDetail = () => {
             <button>View Cart</button>
           </Link>
         </div>
+        <p className="purchaseSuccessful">{purchaseMessage}</p>
       </div>
       {/* paragraph of coin info*/}
       <div className="description">

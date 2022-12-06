@@ -41,7 +41,7 @@
 
 .img-box {
   width: 160px;
-  height: 160px;
+  height: 175px;
   margin-bottom: 2rem;
 }
 
@@ -60,7 +60,7 @@
 
 .buy-container h3 {
   text-align: center;
-  margin: 0.7rem;
+  margin: 0.6rem;
   font-size: 1.4rem;
 }
 
@@ -68,7 +68,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0.7rem 0;
+  margin: 0.4rem 0;
 }
 
 .amount-btns button {
@@ -100,7 +100,7 @@
 .buy-btns button {
   width: 200px;
   height: 30px;
-  margin: 0.5rem;
+  margin: 0 0.5rem;
   background: rgba(75, 209, 149, 0.5);
   border: 2px solid rgb(75, 209, 149);
   color: white;
@@ -110,7 +110,7 @@
 .buy-btns button:hover {
   width: 200px;
   height: 30px;
-  margin: 0.5rem;
+  margin: 0 0.5rem;
   font-size: 0.9rem;
   font-weight: 500;
   background: rgba(75, 209, 149, 0.9);
@@ -119,12 +119,15 @@
   cursor: pointer;
 }
 
+
+.purchaseSuccessful {
+  text-align: center;
+  margin: 0.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
 .description p {
   margin: 1rem 4rem;
   font-size: 0.7rem;
-}
-
-.validBuy {
-  float: right;
-  color: green;
 }

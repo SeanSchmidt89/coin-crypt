@@ -5,3 +5,19 @@
     background-color: #26272b;
     color: #f4f4f4;
 }
+
+
+.home .img-one-container {
+    width: 1150px;
+    height: 400px;
+    margin: auto;
+    background: rgba(0, 0, 0, 1);
+    object-fit: cover;
+}
+
+.home .img-one {
+    width: 1150px;
+    height: 400px;
+    object-fit: cover;
+    opacity: 60%;
+}
