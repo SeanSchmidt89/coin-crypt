@@ -2,20 +2,23 @@ import React from "react";
 import { useSelector } from "react-redux";
 import CoinList from "../../components/CoinList/CoinList";
 import CoinRows from "../../components/CoinRows/CoinRows";
-import imgOne from "../../assets/Images/img1.jpg";
 import "./Home.css";
 
 const Home = () => {
-  const coin = useSelector((state) => state.coins.pageList[0])
+  const coin = useSelector((state) => state.coins.pageList);
+
   return (
     <div>
       <div className="home">
-        <div className="img-one-container">
-          <img className="img-one" src={imgOne} alt='bitcoin' />
+        <div className="img-one"></div>
+        {/* body class max width 1250 to center contents of page */}
+        <div className="body">
+          <p className="test">coin: {coin && coin.name}</p>
+          <div className="coin-list-container">
+            <CoinList />
+          </div>
+          <CoinRows />
         </div>
-        <p>coin: {coin && coin.name}</p>
-        <CoinList />
-        <CoinRows />
       </div>
     </div>
   );

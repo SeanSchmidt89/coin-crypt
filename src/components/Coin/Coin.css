@@ -4,9 +4,9 @@
   height: 142px;
   width: 145px;
   border-radius: 25px;
-  background-color: #26272b;
+  background-color: rgba(38, 39, 43, 0.9);
   color: #f4f4f4;
-  border: 1px solid white;
+  border: 0.5px solid white;
 }
 
 .img-container {
