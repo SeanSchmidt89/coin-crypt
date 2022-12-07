@@ -49,13 +49,9 @@ const CoinList = () => {
               .map((item) => <Coin key={item.id} item={item} />)}
         </div>
         <div className="grid-controls">
-          <h2>Buttons</h2>
-          <button onClick={nextPageHandler}>next page</button>
-          <button onClick={prevPageHandler}>prev page</button>
+          <button onClick={prevPageHandler}>Prev</button>
           {pageNumber}
-          <button>add button</button>
-          <button>add button</button>
-          <button>add button</button>
+          <button onClick={nextPageHandler}>Next</button>
         </div>
       </div>
     </div>

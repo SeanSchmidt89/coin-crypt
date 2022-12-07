@@ -1,13 +1,13 @@
 .coin-list {
-    width: 100%;
+    width: 800px;
 }
 
 .coin-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin: 3rem auto;
+    margin: 0rem;
     background: transparent;
-    /* background-color: rgb(53, 55, 63); */
     width: 900px;
     padding: 0.3rem;
     border-radius: 18px;
@@ -20,18 +20,21 @@
 }
 
 .grid-controls {
-    width: 250px;
+    margin: auto;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 12px;
+    max-width: 138px;
 }
 
 .grid-controls button {
-    margin: 1rem;
+    margin: 0rem 0.6rem;
+    font-weight: 600;
     padding: 0.5rem;
-    width: 80%;
-    border-radius: 8px;
+    border-radius: 12px;
     background-color: black;
     color: rgb(75, 209, 149);
     cursor: pointer;
