@@ -1,26 +1,32 @@
 .coin-rows {
-    max-width: 1250px;
-    min-height: 900px;
-    margin: auto;
-    background-color: #26272b;
-    color: #f4f4f4;
-  }
-  
-  .row-top {
-    display: flex;
-    justify-content: space-evenly;
-    border-bottom: 1px solid white;
-    padding: 0.8rem 0;
-    margin-bottom: 1.5rem;
-  }
-  
-  .row-top p {
-    color: rgb(75, 209, 149);
-    width: 110px;
-    font-size: 1rem;
-    font-weight: 700;
-  }
-  
-  .row-top .name {
-    width: 180px;
-  }
+  max-width: 1250px;
+  min-height: 900px;
+  margin: 8rem auto;
+  background-color: #26272b;
+  color: #f4f4f4;
+}
+
+.coin-list-header {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 2rem 3rem;
+}
+
+.row-top {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 1px solid white;
+  padding: 0.8rem 0;
+  margin-bottom: 1.5rem;
+}
+
+.row-top p {
+  color: rgb(75, 209, 149);
+  width: 110px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.row-top .name {
+  width: 180px;
+}

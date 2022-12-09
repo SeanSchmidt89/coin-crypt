@@ -7,6 +7,7 @@ const CoinRows = () => {
   const coins = useSelector((state) => state.coins.coins);
   return (
     <div className="coin-rows">
+    <h2 className="coin-list-header">Coin List</h2>
       {/* TOP ROW WITH TITLES */}
       <div className="row-top">
         <p className="name">NAME</p>
