@@ -50,3 +50,4 @@ const CoinRows = () => {
 };
 
 export default CoinRows;
+
