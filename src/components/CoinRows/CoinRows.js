@@ -1,13 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import CoinRow from "../CoinRow/CoinRow";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { coinSliceActions } from "../../store/coinSlice";
 import "./CoinRows.css";
 
 const CoinRows = () => {
-  const coins = useSelector((state) => state.coins.coins);
+  const dispatch = useDispatch();
+  const [rowsNumber, setRowsNumber] = useState(1);
+  const coins = useSelector((state) => state.coins.rowsList);
+
+  const prevHandler = () => {
+    if (rowsNumber === 0) {
+      return;
+    } else {
+      setRowsNumber(rowsNumber - 1);
+      dispatch(coinSliceActions.prevRows(rowsNumber));
+    }
+  };
+
+  const nextHandler = () => {
+    if (rowsNumber === 15) {
+      return;
+    } else {
+      setRowsNumber(rowsNumber + 1);
+      dispatch(coinSliceActions.nextRows(rowsNumber));
+    }
+  };
+
   return (
     <div className="coin-rows">
-    <h2 className="coin-list-header">Coin List</h2>
+      <h2 className="coin-list-header">Coin List</h2>
       {/* TOP ROW WITH TITLES */}
       <div className="row-top">
         <p className="name">NAME</p>
@@ -20,7 +42,9 @@ const CoinRows = () => {
       {/* DYNAMIC DATA OF COINS FOR EACH ROW */}
       {coins.length > 0 &&
         coins.slice(0, 16).map((item) => <CoinRow key={item.id} item={item} />)}
-        <button>prev</button><button>next</button>
+      <button onClick={prevHandler}>prev</button>
+      {rowsNumber}
+      <button onClick={nextHandler}>next</button>
     </div>
   );
 };
