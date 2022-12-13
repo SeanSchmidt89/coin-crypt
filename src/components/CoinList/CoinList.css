@@ -20,7 +20,7 @@
 }
 
 .grid-controls {
-    margin: auto;
+    margin:  0.5rem auto;
     display: flex;
     justify-content: center;
     align-items: center;

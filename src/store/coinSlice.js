@@ -6,6 +6,9 @@ const initialState = {
   pageList: [],
   pageIndex1: 0,
   pageIndex2: 9,
+  rowsList: [],
+  rowsIndex1: 0,
+  rowsIndex2: 16,
 };
 
 const coinSlice = createSlice({

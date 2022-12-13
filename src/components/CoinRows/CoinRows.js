@@ -20,6 +20,7 @@ const CoinRows = () => {
       {/* DYNAMIC DATA OF COINS FOR EACH ROW */}
       {coins.length > 0 &&
         coins.slice(0, 16).map((item) => <CoinRow key={item.id} item={item} />)}
+        <button>prev</button><button>next</button>
     </div>
   );
 };

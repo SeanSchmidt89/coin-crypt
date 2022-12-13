@@ -3,8 +3,8 @@ import "./Login.css";
 
 const Login = () => {
   const submitHandler = (e) => {
-    e.preventDefault()
-  }
+    e.preventDefault();
+  };
   return (
     <div className="login">
       <h3>Login</h3>
@@ -18,3 +18,4 @@ const Login = () => {
 };
 
 export default Login;
+
