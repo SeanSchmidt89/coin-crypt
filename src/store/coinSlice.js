@@ -41,7 +41,7 @@ const coinSlice = createSlice({
     prevRows: (state, action) => {
       state.rowsIndex1 = action.payload * 16 - 32;
       state.rowsIndex2 = action.payload * 16 - 16;
-      state.pageList = state.coins.slice(state.rowsIndex1, state.rowsIndex2)
+      state.pageList = state.coins.slice(state.rowsIndex1, state.rowsIndex2);
     },
   },
 });

@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.css";
 
 const Login = () => {
+  const [username, setUserName] = useState("");
+  const [password, setPassword] = useState("");
+
   const submitHandler = (e) => {
     e.preventDefault();
   };
@@ -18,4 +21,3 @@ const Login = () => {
 };
 
 export default Login;
-
