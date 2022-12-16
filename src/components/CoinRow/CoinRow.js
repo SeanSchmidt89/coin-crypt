@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { cartSliceActions } from "../../store/cartSlice";
-import { FaCartPlus } from "react-icons/fa";
+import { FaCartPlus, FaRegCheckCircle } from "react-icons/fa";
 import "./CoinRow.css";
 import axios from "axios";
 
 const CoinRow = ({ item }) => {
   const dispatch = useDispatch();
+  const [addItem, setAddItem] = useState(false);
   const addCartHandler = (e) => {
     e.preventDefault();
     axios
@@ -25,6 +26,10 @@ const CoinRow = ({ item }) => {
         dispatch(cartSliceActions.addItem(newItem));
       })
       .catch((error) => console.log("Error: ", error.message));
+    setAddItem(true);
+    setTimeout(() => {
+      setAddItem(false);
+    }, 150);
   };
   return (
     <Link to={`/coin/${item.id}`}>
@@ -49,7 +54,11 @@ const CoinRow = ({ item }) => {
           ${item.market_cap ? item.market_cap.toLocaleString() : null}
         </p>
         <p className="add-btn">
-          <FaCartPlus onClick={addCartHandler} size={18} />
+          {addItem ? (
+            <FaRegCheckCircle size={18} />
+          ) : (
+            <FaCartPlus onClick={addCartHandler} size={18} />
+          )}
         </p>
       </div>
     </Link>
