@@ -12,7 +12,7 @@ const Nav = () => {
       </Link>
       <div className="nav-btns">
         <Link to="/">Home</Link>
-        <Link to="/">Profile</Link>
+        <Link to="/profile">Profile</Link>
         <Link to="/login">Login</Link>
         <Link to="/sign-up">SignUp</Link>
         <Link to="/cart" className="cart-link">

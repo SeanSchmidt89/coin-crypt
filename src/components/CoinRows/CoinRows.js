@@ -42,12 +42,13 @@ const CoinRows = () => {
       {/* DYNAMIC DATA OF COINS FOR EACH ROW */}
       {coins.length > 0 &&
         coins.slice(0, 16).map((item) => <CoinRow key={item.id} item={item} />)}
-      <button onClick={prevHandler}>prev</button>
-      {rowsNumber}
-      <button onClick={nextHandler}>next</button>
+      <div className="row-controls">
+        <button onClick={prevHandler}>Prev</button>
+        {rowsNumber}
+        <button onClick={nextHandler}>Next</button>
+      </div>
     </div>
   );
 };
 
 export default CoinRows;
-

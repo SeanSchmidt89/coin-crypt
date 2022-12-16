@@ -7,6 +7,7 @@ import CoinDetail from "./routes/CoinDetail/CoinDetail";
 import Cart from "./routes/Cart/Cart";
 import SignUp from "./routes/SignUp/SignUp";
 import Login from "./routes/Login/Login";
+import Profile from "./routes/Profile/Profile";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<Profile />}/>
       </Routes>
       <Footer />
     </div>

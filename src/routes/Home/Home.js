@@ -16,7 +16,7 @@ const Home = () => {
             - The best site to find all your crypto needs
           </p>
           <p className="img-one-text-three">
-            - Pull real time data on all latest cyrpto coins
+            - Pull real time data on all the latest cyrpto coins
           </p>
           <p className="img-one-text-four">
             - Get started and sign up for your free acount now
