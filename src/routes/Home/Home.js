@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CoinList from "../../components/CoinList/CoinList";
 import CoinRows from "../../components/CoinRows/CoinRows";
+import SignUpSection from "../../components/SignUpSection/SignUpSection";
 import "./Home.css";
 
 const Home = () => {
@@ -24,13 +25,14 @@ const Home = () => {
           <Link to="/sign-up">
             <button className="img-one-button-signup">Sign up</button>
           </Link>
-          <Link to='/login'>
+          <Link to="/login">
             <button className="img-one-button-login">Login</button>
           </Link>
           <div className="coin-list-container">
             <CoinList />
           </div>
           <CoinRows />
+          <SignUpSection />
         </div>
       </div>
     </div>

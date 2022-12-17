@@ -14,12 +14,12 @@ const cartSlice = createSlice({
       const id = action.payload.id;
       const existingItem = state.items.find((item) => item.id === id);
       if (existingItem) {
-        state.totalQuantity++;
+        state.totalQuantity = state.totalQuantity + action.payload.quantity;
         state.totalPrice += action.payload.price;
         existingItem.quantity = existingItem.quantity + action.payload.quantity;
         existingItem.totalCost = existingItem.totalCost + action.payload.price;
       } else {
-        state.totalQuantity++;
+        state.totalQuantity = state.totalQuantity + action.payload.quantity;
         state.totalPrice += action.payload.price;
         state.items.push(action.payload);
       }
@@ -35,19 +35,18 @@ const cartSlice = createSlice({
       const id = action.payload;
       const existingItem = state.items.find((item) => item.id === id);
       existingItem.quantity = existingItem.quantity + 1;
-      existingItem.totalCost = existingItem.totalCost + existingItem.price
-      state.totalQuantity = state.totalQuantity + 1
-      state.totalPrice = state.totalPrice + existingItem.price
-
+      existingItem.totalCost = existingItem.totalCost + existingItem.price;
+      state.totalQuantity = state.totalQuantity + 1;
+      state.totalPrice = state.totalPrice + existingItem.price;
     },
 
     decreaseQuantity: (state, action) => {
       const id = action.payload;
       const existingItem = state.items.find((item) => item.id === id);
       existingItem.quantity = existingItem.quantity - 1;
-      existingItem.totalCost = existingItem.totalCost - existingItem.price
-      state.totalQuantity = state.totalQuantity - 1
-      state.totalPrice = state.totalPrice - existingItem.price
+      existingItem.totalCost = existingItem.totalCost - existingItem.price;
+      state.totalQuantity = state.totalQuantity - 1;
+      state.totalPrice = state.totalPrice - existingItem.price;
       if (existingItem.quantity === 0) {
         state.items = state.items.filter((item) => item.id !== id);
       }

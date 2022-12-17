@@ -1,0 +1,36 @@
+.signup-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.signup-section img {
+  width: 600px;
+}
+
+.signup-message h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin: 3rem 4rem;
+  color: rgb(75, 209, 149);
+}
+
+.signup-message p {
+  font-size: 1.2rem;
+  margin: 1rem 5rem;
+}
+
+.signup-message button {
+  margin: 1rem 5rem;
+  width: 100px;
+  height: 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 12px;
+  background: rgb(75, 209, 149);
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+}
