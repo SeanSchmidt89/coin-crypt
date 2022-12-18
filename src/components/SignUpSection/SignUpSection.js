@@ -12,7 +12,7 @@ const SignUpSection = () => {
         <p>Take control of your money</p>
         <p>Simply and securely buy, sell and trade</p>
         <p>Get started with a free account today</p>
-        <Link to='/sign-up'>
+        <Link to="/sign-up">
           <button>Sign Up</button>
         </Link>
       </div>

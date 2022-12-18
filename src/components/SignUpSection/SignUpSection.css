@@ -1,12 +1,12 @@
 .signup-section {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
 .signup-section img {
-  width: 600px;
+  width: 560px;
 }
 
 .signup-message h2 {

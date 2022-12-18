@@ -1,11 +1,22 @@
 import React, { useState } from "react";
+import { UserAuth } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 import "./SignUp.css";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const formHandler = (e) => {
+  const navigate = useNavigate();
+  const { createUser } = UserAuth();
+
+  const formHandler = async (e) => {
     e.preventDefault();
+    try {
+      await createUser(email, password);
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
     setEmail("");
     setPassword("");
   };
