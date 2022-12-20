@@ -32,20 +32,22 @@
 }
 
 .row-controls {
-  margin:  2rem auto;
+  max-width: 138px;
+  margin: 2rem auto;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: black;
   border: 1px solid white;
   border-radius: 12px;
-  max-width: 138px;
+  font-size: 0.9rem;
 }
 
 .row-controls button {
   margin: 0rem 0.6rem;
-  font-weight: 600;
   padding: 0.5rem;
+  font-weight: 600;
+  border: none;
   border-radius: 12px;
   background-color: black;
   color: rgb(75, 209, 149);
@@ -53,5 +55,38 @@
 }
 
 .row-controls button:hover {
-  color: white
+  color: white;
+}
+
+@media screen and (max-width: 1300px) {
+  .coin-rows {
+    width: 85%;
+  }
+
+  .market-cap {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .hr {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 745px) {
+  .coin-list-header {
+    font-size: 2rem;
+    margin: 1.5rem 1rem;
+  }
+
+  .symbol {
+    display: none;
+  }
+
+  .row-top p {
+    width: 110px;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
 }

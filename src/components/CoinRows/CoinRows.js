@@ -35,7 +35,7 @@ const CoinRows = () => {
         <p className="name">NAME</p>
         <p className="price">PRICE (USD)</p>
         <p className="symbol">SYMBOL</p>
-        <p className="24hr">24H CHANGE</p>
+        <p className="hr">24H CHANGE</p>
         <p className="market-cap">MARKET-CAP</p>
         <p>ADD TO CART</p>
       </div>

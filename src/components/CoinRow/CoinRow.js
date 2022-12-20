@@ -44,7 +44,7 @@ const CoinRow = ({ item }) => {
         <p className="symbol">
           {item.symbol ? item.symbol.toUpperCase() : null}
         </p>
-        <p className="24hr">
+        <p className="hr">
           $
           {item.price_change_percentage_24h
             ? item.price_change_percentage_24h.toLocaleString()

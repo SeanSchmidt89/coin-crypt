@@ -28,6 +28,7 @@
     border: 1px solid white;
     border-radius: 12px;
     max-width: 138px;
+    font-size: 0.9rem;
 }
 
 .grid-controls button {
@@ -35,6 +36,7 @@
     font-weight: 600;
     padding: 0.5rem;
     border-radius: 12px;
+    border: none;
     background-color: black;
     color: rgb(75, 209, 149);
     cursor: pointer;
