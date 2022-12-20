@@ -1,4 +1,5 @@
 import React from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./Nav.css";
@@ -18,6 +19,7 @@ const Nav = () => {
         <Link to="/cart" className="cart-link">
           Cart {cartNumber ? cartNumber : null}
         </Link>
+        <FaBars className="hamburger" size={22} />
       </div>
     </div>
   );

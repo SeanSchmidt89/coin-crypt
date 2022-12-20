@@ -93,3 +93,11 @@
   top: 15rem;
   right: 4rem;
 }
+
+
+@media screen and (max-width: 1050px) {
+  .home .body {
+    max-width: 1250px;
+    margin: auto;
+  }
+}
