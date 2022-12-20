@@ -175,7 +175,6 @@
 
   .buy-container {
     margin: 2rem 3rem;
-   
   }
 }
 
@@ -221,6 +220,7 @@
     border: 0.7px solid white;
     border-radius: 4px;
   }
+
   .buy-container h3 {
     font-size: 1.2rem;
   }
@@ -231,22 +231,22 @@
     justify-content: center;
     align-items: center;
   }
-  
+
   .buy-btns button {
     width: 120px;
   }
-  
+
   .buy-btns button:hover {
     width: 120px;
   }
-  
+
   .purchaseSuccessful {
     text-align: center;
     margin: 0.7rem;
     font-size: 0.9rem;
     font-weight: 600;
   }
-  
+
   .description p {
     margin: 1rem 1.4rem;
     font-size: 0.6rem;

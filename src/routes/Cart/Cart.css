@@ -20,7 +20,7 @@
   padding: 0 1rem;
 }
 
-.cart-info h2{
+.cart-info h2 {
   font-size: 1.4rem;
   margin-bottom: 2rem;
 }
@@ -71,4 +71,111 @@
   text-align: center;
   margin-top: 6rem;
   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1050px) {
+  .cart {
+    width: 100%;
+    min-height: 900px;
+    margin: auto;
+  }
+
+  .cart h1 {
+    display: none;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+
+  .cart-container {
+    margin-top: 5rem;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .cart-info {
+    width: 710px;
+    height: 300px;
+    padding: 0rem;
+  }
+
+  .cart-info h2 {
+    font-size: 2.1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .cart-info p {
+    font-size: 1.2rem;
+    padding: 1.1rem 2rem;
+  }
+
+  .cart-btns {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .cart-info button {
+    width: 315px;
+  }
+
+  .cart-info button:hover {
+    width: 315px;
+  }
+
+  .cart-list {
+    margin: 4rem;
+  }
+}
+
+@media screen and (max-width: 745px) {
+  .cart {
+    width: 100%;
+    min-height: 900px;
+    margin: auto;
+  }
+
+  .cart-container {
+    margin-top: 3rem;
+  }
+
+  .cart-info {
+    width: 85%;
+    height: 300px;
+    padding: 0rem;
+  }
+
+  .cart-info h2 {
+    font-size: 1.4rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .cart-info p {
+    font-size: 0.9rem;
+    padding: 0.7rem 2rem;
+  }
+
+  .cart-btns {
+    margin-top: 0.6rem;
+    margin-bottom: 0;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .cart-info button {
+    width: 145px;
+    font-size: 0.6rem;
+  }
+
+  .cart-info button:hover {
+    width: 145px;
+    font-size: 0.6rem;
+  }
+
+  .cart-list {
+    margin: 4rem;
+  }
 }
