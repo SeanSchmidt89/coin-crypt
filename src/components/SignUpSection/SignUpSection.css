@@ -34,3 +34,104 @@
   color: white;
   cursor: pointer;
 }
+
+@media screen and (max-width: 1300px) {
+  .signup-section {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .signup-section img {
+    width: 440px;
+    margin-left: 1rem;
+  }
+
+  .signup-message {
+    margin-right: 2.5rem;
+  }
+  
+  .signup-message h2 {
+    font-size: 1.8rem;
+    margin: 1rem 1rem 0rem 3rem;
+  }
+  
+  .signup-message p {
+    font-size: 1.1rem;
+    margin: 0.8rem 3rem;
+  }
+
+  .signup-message button {
+    margin: 1rem 3rem;
+  }
+}
+
+@media screen and (max-width: 1050px){
+  .signup-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .signup-section img {
+    width: 590px;
+    margin-left: 0rem;
+  }
+
+  .signup-message {
+    margin-right: 2.5rem;
+  }
+  
+  .signup-message h2 {
+    font-size: 2.4rem;
+    margin: 2rem auto;
+  }
+  
+  .signup-message p {
+    font-size: 1.3rem;
+    margin: 0.8rem 2rem;
+  }
+
+  .signup-message button {
+    margin: 1rem 2rem;
+  }
+
+}
+
+@media screen and (max-width: 745px){
+  .signup-section img {
+    width: 355px;
+    margin-left: 0rem;
+    margin: auto;
+  }
+
+  .signup-message {
+    margin-right: 0rem;
+  }
+  
+  .signup-message h2 {
+    font-size: 1.6rem;
+    margin: 2rem auto;
+  }
+  
+  .signup-message p {
+    font-size: 1rem;
+    margin: 0.8rem 1rem;
+  }
+
+  .signup-message button {
+    margin: 1rem 1rem;
+    width: 70x;
+    height: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 12px;
+    background: rgb(75, 209, 149);
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+  }
+}
