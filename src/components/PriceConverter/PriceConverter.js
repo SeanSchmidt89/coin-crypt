@@ -54,7 +54,7 @@ const PriceConverter = ({ coin }) => {
       {isValidDollar ? null : <p>Please enter a number</p>}
       {dollar ? (
         <p>
-          {crypto || dollar} {coin.symbol.toUpperCase()} is equal to $
+          {crypto || dollar} {coin.symbol.toUpperCase()} = $
           {dollar.toLocaleString()} USD
         </p>
       ) : null}

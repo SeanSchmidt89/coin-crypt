@@ -35,7 +35,7 @@
 }
 
 .hamburger {
-    display: none;
+  display: none;
 }
 
 @media screen and (max-width: 1050px) {
@@ -63,25 +63,28 @@
 
   .hamburger {
     display: none;
+  }
 }
-}
 
+@media screen and (max-width: 745px) {
+  .nav {
+    width: 100%;
+  }
 
-@media screen and (max-width: 745px){
-    .nav-btns a {
-        display: none;
-    }
+  .nav-btns a {
+    display: none;
+  }
 
-    .nav a h1 {
-        color: rgb(75, 209, 149);
-        font-size: 1.6rem;
-      }
-    
-    .hamburger {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 0.3rem;
-        cursor: pointer;
-    }
+  .nav a h1 {
+    color: rgb(75, 209, 149);
+    font-size: 1.6rem;
+  }
+
+  .hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.3rem;
+    cursor: pointer;
+  }
 }

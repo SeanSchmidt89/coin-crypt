@@ -42,3 +42,20 @@
     font-size: 1rem;
   }
 }
+
+
+@media screen and (max-width: 745px){
+  .prices {
+    width: 435px;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  .prices h3 {
+    font-size: 1.1rem;
+  }
+
+  .coin-detail .prices p {
+    font-size: 0.95rem;
+  }
+}

@@ -47,3 +47,21 @@
     margin: 2rem 1rem;
     font-size: 1.1rem;
   }
+
+  @media screen and (max-width: 745px) {
+    .price-converter {
+      width: 435px;
+      height: 200px;
+      background-color: #323337;
+      border-radius: 8px;
+    }
+
+    .price-converter h3 {
+      font-size: 1.2rem;
+    }
+    .price-converter p {
+      text-align: center;
+      margin: 2rem 1rem;
+      font-size: 1rem;
+    }
+  }
