@@ -72,6 +72,11 @@
         display: none;
     }
 
+    .nav a h1 {
+        color: rgb(75, 209, 149);
+        font-size: 1.6rem;
+      }
+    
     .hamburger {
         display: flex;
         justify-content: center;

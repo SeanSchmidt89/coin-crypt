@@ -19,7 +19,7 @@ const Nav = () => {
         <Link to="/cart" className="cart-link">
           Cart {cartNumber ? cartNumber : null}
         </Link>
-        <FaBars className="hamburger" size={22} />
+        <FaBars className="hamburger" size={20} />
       </div>
     </div>
   );
