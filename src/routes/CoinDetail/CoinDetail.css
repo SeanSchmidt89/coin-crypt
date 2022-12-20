@@ -222,7 +222,7 @@
     border-radius: 4px;
   }
   .buy-container h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .buy-btns {
@@ -233,11 +233,11 @@
   }
   
   .buy-btns button {
-    width: 160px;
+    width: 120px;
   }
   
   .buy-btns button:hover {
-    width: 160px;
+    width: 120px;
   }
   
   .purchaseSuccessful {
