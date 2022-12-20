@@ -68,6 +68,7 @@
 
 @media screen and (max-width: 745px) {
   .nav {
+    display: none;
     width: 100%;
   }
 

@@ -8,3 +8,9 @@
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (max-width: 745px) {
+  .footer {
+    display: none;
+  }
+}
