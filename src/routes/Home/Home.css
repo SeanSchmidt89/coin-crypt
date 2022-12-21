@@ -90,14 +90,99 @@
 
 .body .coin-list-container {
   position: absolute;
-  top: 15rem;
-  right: 4rem;
+  top: 17rem;
+  right: 9rem;
 }
 
+@media screen and (max-width: 1350px) {
+  .home .img-one {
+    height: 850px;
+  }
 
-@media screen and (max-width: 1050px) {
-  .home .body {
-    max-width: 1250px;
-    margin: auto;
+  .img-one-text-one {
+    font-size: 3rem;
+    left: 7rem;
+  }
+
+  .img-one-text-two {
+    font-size: 1.2rem;
+    top: 19.5rem;
+    left: 7rem;
+  }
+
+  .img-one-text-three {
+    font-size: 1.2rem;
+    top: 21rem;
+    left: 7rem;
+  }
+
+  .img-one-text-four {
+    font-size: 1.2rem;
+    top: 22.5rem;
+    left: 7rem;
+  }
+
+  .img-one-button-signup {
+    top: 24.6rem;
+    left: 8rem;
+    width: 66px;
+    height: 27px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+
+  .img-one-button-login {
+    top: 24.6rem;
+    left: 12.5rem;
+    width: 66px;
+    height: 27px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+
+  .body .coin-list-container {
+    top: 16rem;
+    right: 5rem;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .home .img-one {
+    height: 1150px;
+  }
+
+  .img-one-text-one {
+    left: 16rem;
+  }
+
+  .img-one-text-two {
+    left: 16rem;
+  }
+
+  .img-one-text-three {
+    left: 16rem;
+  }
+
+  .img-one-text-four {
+    left: 16rem;
+  }
+
+  .img-one-button-signup {
+    left: 17rem;
+  }
+
+  .img-one-button-login {
+    left: 21.6rem;
+  }
+
+  .body .coin-list-container {
+    top: 36rem;
+    right: 8rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .img-one-text-one {
+    color: red;
   }
 }

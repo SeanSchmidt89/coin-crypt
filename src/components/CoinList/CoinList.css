@@ -1,48 +1,46 @@
 .coin-list {
-    width: 800px;
+  width: 480px;
 }
 
 .coin-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0rem;
-    background: transparent;
-    width: 900px;
-    padding: 0.3rem;
-    border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0rem;
+  background: transparent;
+  width: 480px;
+  border-radius: 18px;
 }
 
 .coin-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: auto;
 }
 
 .grid-controls {
-    margin:  0.5rem auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    border: 1px solid white;
-    border-radius: 12px;
-    max-width: 138px;
-    font-size: 0.9rem;
+  margin: 0.5rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 12px;
+  max-width: 138px;
+  font-size: 0.9rem;
 }
 
 .grid-controls button {
-    margin: 0rem 0.6rem;
-    font-weight: 600;
-    padding: 0.5rem;
-    border-radius: 12px;
-    border: none;
-    background-color: black;
-    color: rgb(75, 209, 149);
-    cursor: pointer;
+  margin: 0rem 0.6rem;
+  font-weight: 600;
+  padding: 0.5rem;
+  border-radius: 12px;
+  border: none;
+  background-color: black;
+  color: rgb(75, 209, 149);
+  cursor: pointer;
 }
 
 .grid-controls button:hover {
-    color: white
-  }
-
+  color: white;
+}

@@ -9,6 +9,8 @@ const Home = () => {
   return (
     <div>
       <div className="home">
+
+
         <div className="img-one"></div>
         {/* body class max width 1250 to center contents of page */}
         <div className="body">
@@ -31,6 +33,8 @@ const Home = () => {
           <div className="coin-list-container">
             <CoinList />
           </div>
+
+          
           <CoinRows />
           <SignUpSection />
         </div>
