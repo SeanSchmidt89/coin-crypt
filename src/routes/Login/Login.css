@@ -6,6 +6,7 @@
     height: 550px;
     border: 2px solid white;
     border-radius: 16px;
+    transition: 3s;
 }
 
 .login h3 {
@@ -27,6 +28,7 @@
     border-radius: 10px;
     margin: 0.3rem 0 ;
     outline: none;
+    transition: 3s;
 }
 
 .login-form button {
@@ -44,4 +46,28 @@
 
 .login-form button:hover {
     border: 2px solid white;
+}
+
+@media screen and (max-width: 580px){
+    .login {
+        width: 320px;
+        height: 460px;
+        transition: 3s;
+    }
+
+    .login h3 {
+        font-size: 2rem;
+        margin: 4rem 0 3rem 3.5rem;
+    }
+
+    .login-form button {
+        margin: 0.4rem 0;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+
+    .login-form input {
+        width: 210px;
+        transition: 3s;
+    }
 }
