@@ -135,3 +135,22 @@
     cursor: pointer;
   }
 }
+
+@media screen and (max-width: 430px){
+  .signup-section img {
+    width: 305px;
+  }
+  
+  .signup-message h2 {
+    font-size: 1.5rem;
+    margin: 1.5rem auto;
+  }
+  
+  .signup-message p {
+    margin: 0.4rem 1rem;
+  }
+
+  .signup-message button {
+    margin: 0.8rem 1rem;
+  }
+}

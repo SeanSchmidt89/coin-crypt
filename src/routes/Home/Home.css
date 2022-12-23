@@ -183,6 +183,189 @@
 
 @media screen and (max-width: 780px) {
   .img-one-text-one {
-    color: red;
+    left: 11rem;
+  }
+
+  .img-one-text-two {
+    left: 11rem;
+  }
+
+  .img-one-text-three {
+    left: 11rem;
+  }
+
+  .img-one-text-four {
+    left: 11rem;
+  }
+
+  .img-one-button-signup {
+    left: 12rem;
+  }
+
+  .img-one-button-login {
+    left: 16.5rem;
+  }
+
+  .body .coin-list-container {
+    top: 33rem;
+    right: 13.5rem;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .img-one-text-one {
+    font-size: 2rem;
+    left: 6rem;
+  }
+
+  .img-one-text-two {
+    font-size: 0.85rem;
+    top: 18.3rem;
+    left: 6rem;
+  }
+
+  .img-one-text-three {
+    font-size: 0.85rem;
+    top: 19.3rem;
+    left: 6rem;
+  }
+
+  .img-one-text-four {
+    font-size: 0.85rem;
+    top: 20.3rem;
+    left: 6rem;
+  }
+
+  .img-one-button-signup {
+    left: 12rem;
+  }
+
+  .img-one-button-login {
+    left: 16.5rem;
+  }
+
+  .img-one-button-signup {
+    top: 21.8rem;
+    left: 6.5rem;
+    width: 55px;
+    height: 23px;
+    font-size: 0.75rem;
+    border-radius: 6px;
+  }
+
+  .img-one-button-login {
+    top: 21.8rem;
+    left: 10.5rem;
+    width: 55px;
+    height: 23px;
+    font-size: 0.75rem;
+    border-radius: 6px;
+  }
+
+  .body .coin-list-container {
+    top: 33rem;
+    right: 9.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home .img-one {
+    height: 1050px;
+  }
+
+  .img-one-text-one {
+    font-size: 1.8rem;
+    left: 3.5rem;
+  }
+
+  .img-one-text-two {
+    font-size: 0.8rem;
+    top: 18rem;
+    left: 3.5rem;
+  }
+
+  .img-one-text-three {
+    font-size: 0.8rem;
+    top: 19rem;
+    left: 3.5rem;
+  }
+
+  .img-one-text-four {
+    font-size: 0.8rem;
+    top: 20rem;
+    left: 3.5rem;
+  }
+
+  .img-one-button-signup {
+    top: 21.4rem;
+    left: 4rem;
+    width: 55px;
+    height: 23px;
+    font-size: 0.75rem;
+    border-radius: 6px;
+  }
+
+  .img-one-button-login {
+    top: 21.4rem;
+    left: 8rem;
+    width: 55px;
+    height: 23px;
+    font-size: 0.75rem;
+    border-radius: 6px;
+  }
+
+  .body .coin-list-container {
+    top: 29.5rem;
+    right: 7rem;
+  }
+
+}
+
+@media screen and (max-width: 400px){
+  .home .img-one {
+    height: 1050px;
+  }
+
+  .img-one-text-one {
+    top: 14rem;
+    left: 3rem;
+  }
+
+  .img-one-text-two {
+    top: 16.4rem;
+    left: 3rem;
+  }
+
+  .img-one-text-three {
+    top: 17.3rem;
+    left: 3rem;
+  }
+
+  .img-one-text-four {
+    top: 18.2rem;
+    left: 3rem;
+  }
+
+  .img-one-button-signup {
+    top: 19.5rem;
+    left: 3.5rem;
+    width: 55px;
+    height: 23px;
+    font-size: 0.75rem;
+    border-radius: 6px;
+  }
+
+  .img-one-button-login {
+    top: 19.5rem;
+    left: 7.2rem;
+    width: 55px;
+    height: 23px;
+    font-size: 0.75rem;
+    border-radius: 6px;
+  }
+
+  .body .coin-list-container {
+    top: 26rem;
+    right: 4.5rem;
   }
 }

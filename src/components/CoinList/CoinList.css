@@ -44,3 +44,18 @@
 .grid-controls button:hover {
   color: white;
 }
+
+@media screen and (max-width: 780px) {
+  .coin-list {
+    width: 250px;
+  }
+
+  .coin-container {
+    width: 250px;
+  }
+  .coin-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+  }
+}

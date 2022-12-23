@@ -57,3 +57,40 @@
   text-align: center;
   font-size: 0.8rem;
 }
+
+@media screen and (max-width: 780px) {
+  .coin {
+    margin: 0.4rem 0.4rem;
+    padding: 0.6rem;
+    height: 107px;
+    width: 105px;
+    border-radius: 18px;
+  }
+  
+  .img-container {
+    margin: auto;
+  }
+  
+  .coin img {
+    width: 20px;
+    height: 20px;
+  }
+  .coin .name {
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+  
+  .coin .price {
+    font-size: 0.7rem;
+    margin: 0.4rem 0 0.1rem 0;
+  }
+  
+  .price-change-pos {
+    font-size: 0.65rem;
+  }
+  
+  .price-change-neg {
+    font-size: 0.65rem;
+  }
+}
