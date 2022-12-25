@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -6,6 +6,11 @@ import "./Nav.css";
 
 const Nav = () => {
   const cartNumber = useSelector((state) => state.cart.totalQuantity);
+  const [sideNavActive, setSideNavActive] = useState(false);
+
+  const sideNavHandler = () => {
+    setSideNavActive(!sideNavActive);
+  };
   return (
     <div className="nav">
       <Link to="/">
@@ -19,7 +24,10 @@ const Nav = () => {
         <Link to="/cart" className="cart-link">
           Cart {cartNumber ? cartNumber : null}
         </Link>
-        <FaBars className="hamburger" size={20} />
+        <FaBars onClick={sideNavHandler} className="hamburger" size={20} />
+        <div className={sideNavActive ? "show-side-nav" : "hide-side-nav"}>
+          ative
+        </div>
       </div>
     </div>
   );
