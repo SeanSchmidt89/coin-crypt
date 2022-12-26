@@ -16,7 +16,7 @@ const Nav = () => {
       <Link to="/">
         <h1>COIN CRYPT</h1>
       </Link>
-      <div className="nav-btns">
+      <div className={!sideNavActive ? "nav-btns" : "side-nav-btns"}>
         <Link to="/">Home</Link>
         <Link to="/profile">Profile</Link>
         <Link to="/login">Login</Link>
@@ -24,13 +24,30 @@ const Nav = () => {
         <Link to="/cart" className="cart-link">
           Cart {cartNumber ? cartNumber : null}
         </Link>
-        <FaBars onClick={sideNavHandler} className="hamburger" size={20} />
-        <div className={sideNavActive ? "show-side-nav" : "hide-side-nav"}>
-          ative
-        </div>
+
+        <div
+          className={sideNavActive ? "show-side-nav" : "hide-side-nav"}
+        ></div>
       </div>
+      {!sideNavActive ? (
+        <FaBars onClick={sideNavHandler} className="hamburger" size={20} />
+      ) : (
+        <FaTimes onClick={sideNavHandler} className="x" size={25} />
+      )}
     </div>
   );
 };
 
 export default Nav;
+
+function zipIt(women, men) {
+  if (women.length !== men.length) {
+    return "sizes don't match";
+  }
+  let newArr = [];
+  for (let i = 0; i < women.length; i++) {
+    newArr.push([women[i], men[i]]);
+  }
+  return newArr;
+}
+zipIt(["Ana", "Amy", "Lisa"], ["Bob", "Josh", "Tim"]);
