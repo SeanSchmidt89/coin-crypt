@@ -1,7 +1,7 @@
 .footer {
-  height: 245px;
+  height: 285px;
   width: 100%;
-  margin-top: 3rem;
+  margin-top: 5rem;
   background-color: black;
   color: #f4f4f4;
   display: flex;
@@ -9,6 +9,16 @@
   align-items: center;
 }
 
+.footer h2 {
+  font-size: 2.2rem;
+  position: absolute;
+}
+
+.footer h2 span {
+  font-size: 1.1rem;
+  position: relative;
+  top: -14px;
+}
 @media screen and (max-width: 745px) {
   .footer {
     width: 100%;

@@ -4,7 +4,9 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div className="footer">
-      <h2>Footer</h2>
+      <h2>
+        COIN CRYPT<span>®</span>
+      </h2>
     </div>
   );
 };

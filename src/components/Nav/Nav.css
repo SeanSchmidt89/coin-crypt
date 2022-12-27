@@ -129,6 +129,27 @@
     padding-bottom: 0.1rem;
     font-size: 1.1rem;
     font-weight: 500;
-    border-bottom: 1px solid rgb(75, 209, 149);
+    border-bottom: 1.5px solid rgb(75, 209, 149);
+  }
+
+  .show-side-nav a:hover {
+    color:  rgb(75, 209, 149);
+    margin: 1.2rem;
+    padding-bottom: 0.1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-bottom: 1.5px solid white;
+  }
+
+  .show-side-nav .cart-link {
+    border: 2px solid rgb(75, 209, 149);
+    border-radius: 16px;
+    padding: 0 0.8rem 0.2rem 0.6rem;
+  }
+
+  .show-side-nav .cart-link:hover {
+    border: 2px solid white;
+    border-radius: 16px;
+    padding: 0 0.8rem 0.2rem 0.6rem;
   }
 }
