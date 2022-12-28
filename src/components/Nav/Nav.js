@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -8,23 +8,14 @@ import "./Nav.css";
 const Nav = () => {
   const cartNumber = useSelector((state) => state.cart.totalQuantity);
   const [sideNavActive, setSideNavActive] = useState(false);
-  const [userName, setUserName] = useState("");
-  const { user, logOut } = UserAuth();
-  useEffect(() => {
-    try {
-      setUserName(user.email);
-    } catch (err) {
-      console.log(err.message);
-    }
-  }, [user, setUserName]);
+  const { userName, logOut } = UserAuth();
 
   const sideNavHandler = () => {
     setSideNavActive(!sideNavActive);
   };
 
-  const logOutHandler = (e) => {
+  const logOutHandler = () => {
     logOut();
-    setUserName("");
   };
 
   return (

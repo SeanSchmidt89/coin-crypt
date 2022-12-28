@@ -11,6 +11,7 @@ const AuthContext = createContext();
 
 const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState("");
+  const [userName, setUserName] = useState("");
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
@@ -20,6 +21,7 @@ const AuthContextProvider = ({ children }) => {
   };
 
   const logOut = () => {
+    setUserName("");
     return signOut(auth);
   };
 
@@ -31,8 +33,16 @@ const AuthContextProvider = ({ children }) => {
       unsubscribe();
     };
   });
+
+  useEffect(() => {
+    try {
+      setUserName(user.email);
+    } catch (err) {
+      console.log(err.message);
+    }
+  }, [user, setUserName]);
   return (
-    <AuthContext.Provider value={{ user, createUser, logIn, logOut }}>
+    <AuthContext.Provider value={{ user, userName, createUser, logIn, logOut }}>
       {children}
     </AuthContext.Provider>
   );

@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import CoinList from "../../components/CoinList/CoinList";
 import CoinRows from "../../components/CoinRows/CoinRows";
 import SignUpSection from "../../components/SignUpSection/SignUpSection";
+import { UserAuth } from "../../context/AuthContext";
 import "./Home.css";
 
 const Home = () => {
-
+  const { userName } = UserAuth();
   return (
     <div>
       <div className="home">
@@ -23,12 +24,16 @@ const Home = () => {
           <p className="img-one-text-four">
             - Get started and sign up for your free acount now
           </p>
-          <Link to="/sign-up">
-            <button className="img-one-button-signup">Sign up</button>
-          </Link>
-          <Link to="/login">
-            <button className="img-one-button-login">Login</button>
-          </Link>
+          {!userName && (
+            <Link to="/sign-up">
+              <button className="img-one-button-signup">Sign up</button>
+            </Link>
+          )}
+          {!userName && (
+            <Link to="/login">
+              <button className="img-one-button-login">Login</button>
+            </Link>
+          )}
           <div className="coin-list-container">
             <CoinList />
           </div>
