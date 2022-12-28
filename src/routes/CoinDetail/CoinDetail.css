@@ -1,7 +1,7 @@
 .coin-detail {
   width: 1000px;
   height: 1150px;
-  margin: 4rem auto;
+  margin: 6rem auto;
   background-color: #1b1c1e;
 }
 
@@ -135,7 +135,7 @@
   .coin-detail {
     width: 700px;
     height: 1350px;
-    margin: 3rem auto;
+    margin: 4.5rem auto;
     background-color: #1b1c1e;
   }
 
@@ -182,7 +182,7 @@
   .coin-detail {
     max-width: 370px;
     height: 1550px;
-    margin: 2rem auto;
+    margin: 3.5rem auto;
     background-color: #1b1c1e;
   }
 

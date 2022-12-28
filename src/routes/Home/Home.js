@@ -6,6 +6,7 @@ import SignUpSection from "../../components/SignUpSection/SignUpSection";
 import "./Home.css";
 
 const Home = () => {
+
   return (
     <div>
       <div className="home">
